@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Customer } from '../model/customer.model';
 import { Training } from '../model/training.model';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -11,9 +12,10 @@ import { Training } from '../model/training.model';
  * jusqu'à la validation de celui-ci qui provoquera la suppresion dans le LS du panier à l'exception du customer 
  */
 export class CartService {  
+  
   private cart : Map<number,Training>;  // panier
 
-  constructor() {     
+  constructor(private http: HttpClient ) {     
     // au démarrage du service, je récupère le contenu du local storage : commande en cours
     let cart = localStorage.getItem('cart');
     if(cart){  // le panier existe déjà
