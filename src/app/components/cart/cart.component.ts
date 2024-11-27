@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Training } from 'src/app/model/training.model';
 import { CartService } from 'src/app/services/cart.service';
+import { AuthenticateService } from 'src/app/services/authenticate.service';
 
 @Component({
   selector: 'app-cart',
@@ -15,7 +16,11 @@ import { CartService } from 'src/app/services/cart.service';
 export class CartComponent implements OnInit {
   cart: Training[] | undefined;
   amount: number = 0;
-  constructor(private cartService: CartService, private router: Router) {}
+  constructor(
+    private cartService: CartService,
+    private router: Router,
+    private authenticateService: AuthenticateService
+  ) {}
 
   /**
    * à l'initialisation du composant, récupération des données du panier via le service dédié
@@ -38,7 +43,8 @@ export class CartComponent implements OnInit {
    * Méthode de gestion de l'étape suivante de la commande en renvoyant vers le composant de gestion client (formulaire)
    */
   onNewOrder() {
-    console.log('Hello');
-    this.router.navigateByUrl('customer');
+    if (this.authenticateService.isLoggedIn()) {
+      this.router.navigateByUrl('customer');
+    } else console.log('Vous devez vous connecter pour passer commande .');
   }
 }
