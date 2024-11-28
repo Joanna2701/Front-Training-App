@@ -25,14 +25,40 @@
   ],
   "users": [
     {
+      "id": 1,
       "email": "elbab@gmail.com",
       "password": "1234",
       "roles": "['ADMIN', 'USER'] "
     },
     {
+      "id": 2,
       "email": "hugo@gmail.com",
       "password": "1234",
       "roles": "['USER'] "
+    },
+    {
+      "id": 10,
+      "email": "bla@gmail.com",
+      "password": "1234",
+      "roles": "['USER'] "
+    },
+    {
+      "email": "dsfsdfsdf@gmail.com",
+      "password": "1234",
+      "roles": "['USER'] ",
+      "id": 11
+    },
+    {
+      "id": 12,
+      "email": "cc",
+      "password": "cc",
+      "roles": "cc"
+    },
+    {
+      "email": "dssdf",
+      "password": "sfddfsd",
+      "roles": "fsfds",
+      "id": 13
     }
   ]
 }

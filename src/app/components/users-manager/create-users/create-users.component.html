@@ -1,0 +1,14 @@
+<div class="forms-group">
+  <h2>Creation d'Utilisateur</h2>
+  <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label class="control-label">Email : </label>
+      <input type="text" formControlName="email" class="form-control" />
+      <label class="control-label">Password : </label>
+      <input type="text" formControlName="password" class="form-control" />
+      <label class="control-label">Role : </label>
+      <input type="text" formControlName="roles" class="form-control" />
+      <button type="submit" class="btn btn-success">valider</button>
+    </div>
+  </form>
+</div>

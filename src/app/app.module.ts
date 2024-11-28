@@ -18,6 +18,8 @@ import { TrainingsManagerComponent } from './components/trainings-manager/traini
 import { UsersManagerComponent } from './components/users-manager/users-manager.component';
 import { CreateTrainingComponent } from './components/trainings-manager/create-trainings/create-trainings.component';
 import { UpdateTrainingsComponent } from './components/trainings-manager/update-trainings/update-trainings.component';
+import { CreateUsersComponent } from './components/users-manager/create-users/create-users.component';
+import { UpdateUsersComponent } from './components/users-manager/update-users/update-users.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { UpdateTrainingsComponent } from './components/trainings-manager/update-
     UsersManagerComponent,
     CreateTrainingComponent,
     UpdateTrainingsComponent,
+    CreateUsersComponent,
+    UpdateUsersComponent,
   ],
   imports: [
     BrowserModule,

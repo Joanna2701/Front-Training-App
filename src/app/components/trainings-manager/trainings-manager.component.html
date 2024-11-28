@@ -28,7 +28,11 @@
               >Modifier</a
             >
           </td>
-          <td><a class="btn btn-danger">Supprimer</a></td>
+          <td>
+            <a class="btn btn-danger" (click)="onDelete(training.id)"
+              >Supprimer</a
+            >
+          </td>
         </tr>
       </tbody>
     </table>
