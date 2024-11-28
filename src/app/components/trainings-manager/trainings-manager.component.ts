@@ -35,7 +35,6 @@ export class TrainingsManagerComponent implements OnInit {
   }
 
   onUpdate(trainingId: number): void {
-    this.router.navigateByUrl('update-trainings');
-    this.updateTrainingsComponent.update(trainingId);
+    this.router.navigate(['update-trainings', trainingId]);
   }
 }

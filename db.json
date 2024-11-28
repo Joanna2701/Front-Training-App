@@ -20,35 +20,8 @@
       "description": "Prise en main de NodeJs/Express 2 jours.",
       "price": 1400,
       "quantity": 1
-    },
-    {
-      "id": 6,
-      "name": "grthr",
-      "description": "gtrgte",
-      "price": "1500",
-      "quantity": 1
-    },
-    {
-      "id": 7,
-      "name": "gtrg",
-      "description": "gtrghtrg",
-      "price": "120",
-      "quantity": 1
-    },
-    {
-      "id": 8,
-      "name": "formation",
-      "description": "jynhyu,kyu",
-      "price": "12000000",
-      "quantity": 1
-    },
-    {
-      "id": 9,
-      "name": "gtrhbtr",
-      "description": "htrhy",
-      "price": "12000",
-      "quantity": 1
     }
+    
   ],
   "users": [
     {
