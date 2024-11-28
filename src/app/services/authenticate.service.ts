@@ -15,13 +15,16 @@ export class AuthenticateService {
   setUserToLocalStorage(user: any): void {
     localStorage.setItem('user', JSON.stringify(user));
   }
-  getUserFromLocalStorage(): boolean {
+
+  getUserFromLocalStorage(): void {
     const userData = localStorage.getItem('user');
     if (userData) {
       this.userIsLogged = true;
-      return true;
+
+      if (userData.includes('ADMIN')) {
+        this.isAdmin = true;
+      }
     }
-    return false;
   }
 
   verifyUser(userData: any, formPassword: string): void {
@@ -40,8 +43,7 @@ export class AuthenticateService {
   }
 
   checkIfAdmin(): boolean {
-    const admin = this.getUserFromLocalStorage();
-    if (admin) {
+    if (this.isAdmin) {
       return true;
     }
     return false;

@@ -27,10 +27,13 @@ export class UpdateTrainingsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.route.params.subscribe({
-    //   next: (params) => this.getTraining(parseInt(params['id'])),
-    //   error: (err) => console.log(err),
-    // });
+    this.route.params.subscribe({
+      next: (params) => {
+        this.trainingId = parseInt(params['id']);
+        this.getTraining();
+      },
+      error: (err) => console.log(err),
+    });
   }
 
   getTraining(): void {
@@ -46,11 +49,6 @@ export class UpdateTrainingsComponent implements OnInit {
       },
       error: (err) => console.log(err),
     });
-  }
-
-  update(trainingId: number): void {
-    this.trainingId = trainingId;
-    this.getTraining();
   }
 
   onSubmit(form: FormGroup) {

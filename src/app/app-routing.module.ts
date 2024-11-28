@@ -11,6 +11,9 @@ import { TrainingsManagerComponent } from './components/trainings-manager/traini
 import { UsersManagerComponent } from './components/users-manager/users-manager.component';
 import { CreateTrainingComponent } from './components/trainings-manager/create-trainings/create-trainings.component';
 import { UpdateTrainingsComponent } from './components/trainings-manager/update-trainings/update-trainings.component';
+import { CreateUsersComponent } from './components/users-manager/create-users/create-users.component';
+import { UpdateUsersComponent } from './components/users-manager/update-users/update-users.component';
+
 const routes: Routes = [
   { path: 'trainings', component: TrainingsComponent }, // Cette route affiche le composant TrainingsComponent quand l'URL est '/trainings'.
   { path: 'cart', component: CartComponent }, // Affiche le composant CartComponent lorsque l'URL est '/cart'.
@@ -21,7 +24,9 @@ const routes: Routes = [
   { path: 'trainings-manager', component: TrainingsManagerComponent },
   { path: 'users-manager', component: UsersManagerComponent },
   { path: 'create-trainings', component: CreateTrainingComponent },
-  { path: 'update-trainings', component: UpdateTrainingsComponent },
+  { path: 'update-trainings/:id', component: UpdateTrainingsComponent },
+  { path: 'create-users', component: CreateUsersComponent },
+  { path: 'update-users/:id', component: UpdateUsersComponent },
   { path: '404', component: NotFoundComponent }, // Cette route affiche le composant NotFoundComponent pour '/404'.
   { path: '', redirectTo: 'trainings', pathMatch: 'full' }, // Si l'URL est vide ('/'), redirige vers '/trainings'.
   { path: '**', redirectTo: '/404' }, // Cette route gère toutes les URL non définies et les redirige vers '/404'.
