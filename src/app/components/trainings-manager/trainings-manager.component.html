@@ -8,6 +8,7 @@
           <th>DESCRIPTION</th>
           <th>PRIX</th>
           <th>QUANTITE</th>
+
           <th>
             <a class="btn btn-success" (click)="onAdd()">Ajouter formation</a>
           </th>
@@ -22,7 +23,11 @@
           <td>
             {{ training.quantity }}
           </td>
-          <td><a class="btn btn-primary">Modifier</a></td>
+          <td>
+            <a class="btn btn-primary" (click)="onUpdate(training.id)"
+              >Modifier</a
+            >
+          </td>
           <td><a class="btn btn-danger">Supprimer</a></td>
         </tr>
       </tbody>

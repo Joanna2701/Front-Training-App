@@ -20,6 +20,6 @@ export class UsersManagerComponent implements OnInit {
   ngOnInit(): void {}
 
   getAllUsers() {
-    this.listOfUsers = this.authenticateService.users;
+    //this.listOfUsers = this.authenticateService.users;
   }
 }

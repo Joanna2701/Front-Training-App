@@ -32,7 +32,7 @@ export class CreateTrainingComponent implements OnInit {
       this.apiService.create(training).subscribe({
         next: () => {
           console.log('Formation créé avec succès.');
-          this.router.navigateByUrl('training-manager');
+          this.router.navigateByUrl('trainings-manager');
         },
         error: (error: any) => console.log(error),
       });

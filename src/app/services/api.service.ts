@@ -20,4 +20,20 @@ export class ApiService {
   public create(value: any): any {
     return this.http.post<any>(environment.host + '/trainings/', value);
   }
+
+  public getUsers() {
+    return this.http.get<any[]>(environment.host + '/users');
+  }
+
+  public getUser(id: number) {
+    return this.http.get<any>(environment.host + '/users/' + id);
+  }
+
+  public getUserByMail(email: string) {
+    return this.http.get<any>(environment.host + '/users?email=' + email);
+  }
+
+  public updateTraining(id: number, form: any) {
+    return this.http.get<any>(environment.host + '/trainings/' + id, form);
+  }
 }

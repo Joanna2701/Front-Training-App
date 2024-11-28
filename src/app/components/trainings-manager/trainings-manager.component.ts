@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Training } from 'src/app/model/training.model';
 import { ApiService } from 'src/app/services/api.service';
 import { Router } from '@angular/router';
+import { UpdateTrainingsComponent } from './update-trainings/update-trainings.component';
 
 @Component({
   selector: 'app-trainings-manager',
@@ -11,7 +12,11 @@ import { Router } from '@angular/router';
 export class TrainingsManagerComponent implements OnInit {
   listTrainings: Training[] | undefined;
   error: String | null = null;
-  constructor(private apiService: ApiService, private router: Router) {}
+  constructor(
+    private apiService: ApiService,
+    private router: Router,
+    private updateTrainingsComponent: UpdateTrainingsComponent
+  ) {}
 
   ngOnInit(): void {
     this.getAllTrainings();
@@ -27,5 +32,10 @@ export class TrainingsManagerComponent implements OnInit {
 
   onAdd(): void {
     this.router.navigateByUrl('create-trainings');
+  }
+
+  onUpdate(trainingId: number): void {
+    this.router.navigateByUrl('update-trainings');
+    this.updateTrainingsComponent.update(trainingId);
   }
 }

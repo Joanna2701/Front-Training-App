@@ -17,6 +17,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { TrainingsManagerComponent } from './components/trainings-manager/trainings-manager.component';
 import { UsersManagerComponent } from './components/users-manager/users-manager.component';
 import { CreateTrainingComponent } from './components/trainings-manager/create-trainings/create-trainings.component';
+import { UpdateTrainingsComponent } from './components/trainings-manager/update-trainings/update-trainings.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { CreateTrainingComponent } from './components/trainings-manager/create-t
     TrainingsManagerComponent,
     UsersManagerComponent,
     CreateTrainingComponent,
+    UpdateTrainingsComponent,
   ],
   imports: [
     BrowserModule,
