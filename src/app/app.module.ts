@@ -13,6 +13,11 @@ import { OrderComponent } from './components/order/order.component';
 import { FormComponent } from './components/form/form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { TrainingsManagerComponent } from './components/trainings-manager/trainings-manager.component';
+import { UsersManagerComponent } from './components/users-manager/users-manager.component';
+import { CreateTrainingComponent } from './components/trainings-manager/create-trainings/create-trainings.component';
+import { UpdateTrainingsComponent } from './components/trainings-manager/update-trainings/update-trainings.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +29,11 @@ import { LoginComponent } from './login/login.component';
     OrderComponent,
     FormComponent,
     LoginComponent,
+    DashboardComponent,
+    TrainingsManagerComponent,
+    UsersManagerComponent,
+    CreateTrainingComponent,
+    UpdateTrainingsComponent,
   ],
   imports: [
     BrowserModule,
