@@ -13,6 +13,7 @@ import { CreateTrainingComponent } from './components/trainings-manager/create-t
 import { UpdateTrainingsComponent } from './components/trainings-manager/update-trainings/update-trainings.component';
 import { CreateUsersComponent } from './components/users-manager/create-users/create-users.component';
 import { UpdateUsersComponent } from './components/users-manager/update-users/update-users.component';
+import { AdminGuard } from './components/admin/admin.guard';
 
 const routes: Routes = [
   { path: 'trainings', component: TrainingsComponent }, // Cette route affiche le composant TrainingsComponent quand l'URL est '/trainings'.
@@ -20,13 +21,41 @@ const routes: Routes = [
   { path: 'order', component: OrderComponent }, // Affiche le composant OrderComponent lorsque l'URL est '/order'.
   { path: 'login', component: LoginComponent }, // Depuis le bouton Se connecter, on arrive dans le composant html login
   { path: 'customer', component: CustomerComponent }, // Affiche le composant CustomerComponent lorsque l'URL est '/customer'.
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'trainings-manager', component: TrainingsManagerComponent },
-  { path: 'users-manager', component: UsersManagerComponent },
-  { path: 'create-trainings', component: CreateTrainingComponent },
-  { path: 'update-trainings/:id', component: UpdateTrainingsComponent },
-  { path: 'create-users', component: CreateUsersComponent },
-  { path: 'update-users/:id', component: UpdateUsersComponent },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    canActivate: [AdminGuard],
+  },
+  {
+    path: 'trainings-manager',
+    component: TrainingsManagerComponent,
+    canActivate: [AdminGuard],
+  },
+  {
+    path: 'users-manager',
+    component: UsersManagerComponent,
+    canActivate: [AdminGuard],
+  },
+  {
+    path: 'create-trainings',
+    component: CreateTrainingComponent,
+    canActivate: [AdminGuard],
+  },
+  {
+    path: 'update-trainings/:id',
+    component: UpdateTrainingsComponent,
+    canActivate: [AdminGuard],
+  },
+  {
+    path: 'create-users',
+    component: CreateUsersComponent,
+    canActivate: [AdminGuard],
+  },
+  {
+    path: 'update-users/:id',
+    component: UpdateUsersComponent,
+    canActivate: [AdminGuard],
+  },
   { path: '404', component: NotFoundComponent }, // Cette route affiche le composant NotFoundComponent pour '/404'.
   { path: '', redirectTo: 'trainings', pathMatch: 'full' }, // Si l'URL est vide ('/'), redirige vers '/trainings'.
   { path: '**', redirectTo: '/404' }, // Cette route gère toutes les URL non définies et les redirige vers '/404'.
