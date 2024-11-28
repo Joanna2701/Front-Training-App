@@ -20,72 +20,44 @@
       "description": "Prise en main de NodeJs/Express 2 jours.",
       "price": 1400,
       "quantity": 1
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "email": "elbab@gmail.com",
+      "password": "1234",
+      "roles": "['ADMIN', 'USER'] "
     },
     {
-      "id": 6
+      "id": 2,
+      "email": "hugo@gmail.com",
+      "password": "1234",
+      "roles": "['USER'] "
     },
     {
-      "id": 7
+      "id": 10,
+      "email": "bla@gmail.com",
+      "password": "1234",
+      "roles": "['USER'] "
     },
     {
-      "id": 8
-    },
-    {
-      "id": 9
-    },
-    {
-      "id": 10
-    },
-    {
+      "email": "dsfsdfsdf@gmail.com",
+      "password": "1234",
+      "roles": "['USER'] ",
       "id": 11
     },
     {
-      "id": 12
+      "id": 12,
+      "email": "cc",
+      "password": "cc",
+      "roles": "cc"
     },
     {
+      "email": "dssdf",
+      "password": "sfddfsd",
+      "roles": "fsfds",
       "id": 13
-    },
-    {
-      "id": 14
-    },
-    {
-      "id": 15
-    },
-    {
-      "id": 16
-    },
-    {
-      "id": 17
-    },
-    {
-      "id": 18
-    },
-    {
-      "id": 19
-    },
-    {
-      "id": 20
-    },
-    {
-      "id": 21
-    },
-    {
-      "id": 22
-    },
-    {
-      "id": 23
-    },
-    {
-      "id": 24
-    },
-    {
-      "id": 25
-    },
-    {
-      "id": 26
-    },
-    {
-      "id": 34
     }
   ]
 }

@@ -1,0 +1,40 @@
+<div class="container">
+  <ng-container *ngIf="listTrainings">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>NOM</th>
+          <th>DESCRIPTION</th>
+          <th>PRIX</th>
+          <th>QUANTITE</th>
+
+          <th>
+            <a class="btn btn-success" (click)="onAdd()">Ajouter formation</a>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let training of listTrainings">
+          <td>{{ training.id }}</td>
+          <td>{{ training.name }}</td>
+          <td>{{ training.description }}</td>
+          <td>{{ training.price }}</td>
+          <td>
+            {{ training.quantity }}
+          </td>
+          <td>
+            <a class="btn btn-primary" (click)="onUpdate(training.id)"
+              >Modifier</a
+            >
+          </td>
+          <td>
+            <a class="btn btn-danger" (click)="onDelete(training.id)"
+              >Supprimer</a
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-container>
+</div>

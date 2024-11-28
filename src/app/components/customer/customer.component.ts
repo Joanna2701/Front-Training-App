@@ -23,7 +23,7 @@ export class CustomerComponent implements OnInit {
   constructor(public cartService: CartService, private router: Router) {
     let customer = this.cartService.getCustomer();
     this.myForm = new FormGroup({
-      name: new FormControl(customer.name),
+      name: new FormControl(customer!.name),
       firstName: new FormControl(customer.firstName),
       adress: new FormControl(customer.address),
       phone: new FormControl(customer.phone),
