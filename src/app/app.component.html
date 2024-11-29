@@ -1,5 +1,6 @@
-<nav class="navbar navbar-expand-sm bg-light navbar-light">
-  <a class="navbar-brand" href="#">TRAININGS</a>
+<nav class="navbar navbar-expand-sm navbar-light">
+  <img class="imglogo" src="assets/photo.png" alt="Logo" />
+  <a class="navbar-brand" href="#"></a>
 
   <ul class="navbar-nav">
     <li class="nav-item">
@@ -7,16 +8,25 @@
         >Liste des Formations</a
       >
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#" routerLink="/cart">Contenu du Panier</a>
-    </li>
 
     <li class="nav-item" *ngIf="this.authenticateService.checkIfAdmin()">
       <a class="nav-link" href="#" routerLink="/dashboard">Espace Admin</a>
     </li>
 
-    <li *ngIf="!this.authenticateService.isLoggedIn()" class="nav-item">
-      <a class="nav-link" href="#" routerLink="/login">Connexion</a>
+    <li
+      *ngIf="!this.authenticateService.isLoggedIn()"
+      class="right-nav-items"
+      class="nav-item"
+    >
+      <a class="btn btn-primary nav-link px-4" href="#" routerLink="/login"
+        >Connexion</a
+      >
+    </li>
+
+    <li class="nav-item" class="right-nav-items">
+      <a class="nav-link" href="#" routerLink="/cart"
+        ><img class="chariot" src="assets/chariot3.png"
+      /></a>
     </li>
 
     <li *ngIf="this.authenticateService.isLoggedIn()" class="nav-item">

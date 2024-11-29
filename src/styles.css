@@ -1,4 +1,135 @@
 /* You can add global styles to this file, and also import other style files */
 .app-container {
     display: flex;
- }
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F1FAEE;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: auto;
+    width: 100%;
+    min-width: 1900px;
+    min-height: 1800px;
+    background-color: #e9f6f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.imglogo,
+.chariot {
+    height: 60px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+
+.paniervert {
+    height: 60px;
+    max-height: 100%;
+    object-fit: contain;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+
+.navbar {
+    background-color: #A8DADC;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4a5568 !important;
+    display: flex;
+    align-items: center;
+
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.nav-link {
+    font-size: 1rem;
+    color: #2b6cb0 !important;
+    margin-right: 10px;
+}
+
+.nav-link:hover {
+    color: #1a202c !important;
+}
+
+.right-nav-items {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+    gap: 15px;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    margin-top: 20px;
+}
+
+th {
+    background-color: #bee3db;
+    color: #4a5568;
+    text-align: left;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+td {
+    padding: 10px;
+    font-size: 0.9rem;
+    color: #4a5568;
+}
+
+tr:nth-child(even) {
+    background-color: #e6f6f2;
+}
+
+
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: #ffffff;
+    padding: 8px 16px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+
+input[type="number"] {
+    width: 60px;
+    text-align: center;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+
+h1 {
+    font-size: 2.2rem;
+    color: #0000;
+    margin-bottom: 20px;
+}
