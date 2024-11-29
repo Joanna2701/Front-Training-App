@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'cart', component: CartComponent }, // Affiche le composant CartComponent lorsque l'URL est '/cart'.
   { path: 'order', component: OrderComponent }, // Affiche le composant OrderComponent lorsque l'URL est '/order'.
   { path: 'login', component: LoginComponent }, // Depuis le bouton Se connecter, on arrive dans le composant html login
-  { path: 'customer', component: CustomerComponent }, // Affiche le composant CustomerComponent lorsque l'URL est '/customer'.
+  { path: 'customer', component: CustomerComponent, canActivate: [AdminGuard] }, // Affiche le composant CustomerComponent lorsque l'URL est '/customer'.
   {
     path: 'dashboard',
     component: DashboardComponent,

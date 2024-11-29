@@ -32,6 +32,7 @@ export class AuthenticateService {
       this.userIsLogged = true;
       this.setUserToLocalStorage(userData);
       this.checkIfAdmin();
+      this.router.navigateByUrl('');
     } else console.log('Une des valeurs est incorrecte');
   }
 
